@@ -1,0 +1,1 @@
+Hello, full stack QA! Hello, JAVA!
