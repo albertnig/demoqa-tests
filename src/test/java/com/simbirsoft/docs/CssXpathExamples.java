@@ -28,7 +28,6 @@ public class CssXpathExamples {
         $("input#email");
         $("input[id=email]");
 
-
         // <input type="email" class="inputtext login_form_input_box" name="email">
 
         $("[name=email]");
