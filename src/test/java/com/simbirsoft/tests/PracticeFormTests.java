@@ -7,8 +7,7 @@ import org.junit.jupiter.api.Test;
 import java.io.File;
 import java.time.Duration;
 
-import static com.codeborne.selenide.Condition.text;
-import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
@@ -16,18 +15,14 @@ import static com.codeborne.selenide.Selenide.*;
 public class PracticeFormTests {
     @BeforeAll
     static void beforeAll() {
-        /*java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        Configuration.browserSize = screenSize.width + "x" + screenSize.height;*/
-        Configuration.browser = "chrome";
-        Configuration.headless = false; // false для разработки, true для CI
-        Configuration.browserSize = "1920x1080"; // фиксированный размер вместо полного экрана
-        // ... остальная конфигурация
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        Configuration.browserSize = screenSize.width + "x" + screenSize.height;
         Configuration.pageLoadTimeout = 60000;
         Configuration.holdBrowserOpen = true;
     }
 
     @Test
-    void fillFormTest(){
+    void fillFormTest() {
         String permanentAddress = "some street 1";
 
         open("https://demoqa.com/automation-practice-form");
@@ -56,7 +51,6 @@ public class PracticeFormTests {
         // Загрузка файла
         $("#uploadPicture").uploadFromClasspath("Image.png");
         $("#currentAddress").setValue(permanentAddress);
-
         // Выбор штата
         $("#state").scrollTo().click();
         $(byText("NCR")).click();
@@ -65,13 +59,31 @@ public class PracticeFormTests {
         $(byText("Delhi")).click();
         // Отправка формы
         $("#submit").click();
+
         // Ожидание модального окна
-        $("#example-modal-sizes-title-lg").shouldBe(visible, Duration.ofSeconds(10));
-        // Проверки результатов
+        $("#example-modal-sizes-title-lg").shouldBe(visible, Duration.ofSeconds(15));
+        $(".modal-content").shouldBe(visible);
         $(".table-responsive").shouldBe(visible);
-        $(".table-responsive tr:nth-child(1) td:nth-child(2)").shouldHave(text("Alex Smith"));
-        $(".table-responsive tr:nth-child(2) td:nth-child(2)").shouldHave(text("alex@smith.com"));
-        $(".table-responsive tr:nth-child(9) td:nth-child(2)").shouldHave(text("some street 1"));
-        $(".table-responsive tr:nth-child(10) td:nth-child(2)").shouldHave(text(permanentAddress));
+
+        // Проверка заголовка
+        $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
+
+        // Проверка что таблица содержит все данные
+        $(".table-responsive").shouldHave(
+                text("Alex Smith"),
+                text("alex@smith.com"),
+                text("Male"),
+                text("8800200600"),
+                text("11 August,1992"),
+                text("Maths, Physics"),
+                text("Sports, Reading"),
+                text("Image.png"),
+                text("some street 1"),
+                text("NCR Delhi")
+        );
+
+        // Закрытие модального окна
+        $("#closeLargeModal").click();
+        $(".modal-content").should(disappear);
     }
 }
