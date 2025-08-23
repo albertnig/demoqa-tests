@@ -19,13 +19,14 @@ public class PracticeFormTests {
         Configuration.browserSize = screenSize.width + "x" + screenSize.height;
         Configuration.pageLoadTimeout = 60000;
         Configuration.holdBrowserOpen = true;
+        Configuration.baseUrl = "https://demoqa.com";
     }
 
     @Test
     void fillFormTest() {
         String permanentAddress = "some street 1";
 
-        open("https://demoqa.com/automation-practice-form");
+        open("/automation-practice-form");
         // Заполнение основных полей
         $("#firstName").setValue("Alex");
         $("#lastName").setValue("Smith");
@@ -43,20 +44,19 @@ public class PracticeFormTests {
         $("#subjectsInput").setValue("Math");
         $(".subjects-auto-complete__option").shouldBe(visible).click();
         // Добавление второго предмета
-        $("#subjectsInput").setValue("Physics");
-        $(".subjects-auto-complete__option").shouldBe(visible).click();
+        $("#subjectsInput").setValue("Physics").pressEnter();
         // Выбор хобби
         $("label[for='hobbies-checkbox-1']").click();
-        $("label[for='hobbies-checkbox-2']").click();
+        $("#hobbiesWrapper").$(byText("Reading")).click();
         // Загрузка файла
         $("#uploadPicture").uploadFromClasspath("Image.png");
         $("#currentAddress").setValue(permanentAddress);
         // Выбор штата
         $("#state").scrollTo().click();
-        $(byText("NCR")).click();
+        $("#stateCity-wrapper").$(byText("NCR")).click();
         // Выбор города
         $("#city").click();
-        $(byText("Delhi")).click();
+        $("#stateCity-wrapper").$(byText("Delhi")).click();
         // Отправка формы
         $("#submit").click();
 
