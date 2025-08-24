@@ -1,2 +1,2 @@
-Hello, full stack QA! Hello, JAVA!
-It was a good job!
+Hello, full stack QA!
+Testing the website demoqa.com
