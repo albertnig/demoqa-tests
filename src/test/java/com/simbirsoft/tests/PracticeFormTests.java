@@ -4,11 +4,9 @@ import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
-import java.io.File;
 import java.time.Duration;
 
 import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selectors.byName;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
 
@@ -25,7 +23,6 @@ public class PracticeFormTests {
     @Test
     void fillFormTest() {
         String permanentAddress = "some street 1";
-
         open("/automation-practice-form");
         // Заполнение основных полей
         $("#firstName").setValue("Alex");
@@ -33,7 +30,7 @@ public class PracticeFormTests {
         $("#userEmail").setValue("alex@smith.com");
         // Выбор пола
         $("label[for='gender-radio-1']").click();
-
+        // Заполнение номера телефона
         $("#userNumber").setValue("8800200600");
         // Заполнение даты рождения
         $("#dateOfBirthInput").click();
@@ -59,15 +56,12 @@ public class PracticeFormTests {
         $("#stateCity-wrapper").$(byText("Delhi")).click();
         // Отправка формы
         $("#submit").click();
-
         // Ожидание модального окна
         $("#example-modal-sizes-title-lg").shouldBe(visible, Duration.ofSeconds(15));
         $(".modal-content").shouldBe(visible);
         $(".table-responsive").shouldBe(visible);
-
         // Проверка заголовка
         $("#example-modal-sizes-title-lg").shouldHave(text("Thanks for submitting the form"));
-
         // Проверка что таблица содержит все данные
         $(".table-responsive").shouldHave(
                 text("Alex Smith"),
@@ -81,7 +75,6 @@ public class PracticeFormTests {
                 text("some street 1"),
                 text("NCR Delhi")
         );
-
         // Закрытие модального окна
         $("#closeLargeModal").click();
         $(".modal-content").should(disappear);
