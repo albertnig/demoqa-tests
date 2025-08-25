@@ -16,7 +16,7 @@ public class PracticeFormTests {
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
         Configuration.browserSize = screenSize.width + "x" + screenSize.height;
         Configuration.pageLoadTimeout = 60000;
-        Configuration.holdBrowserOpen = true;
+        //Configuration.holdBrowserOpen = true;
         Configuration.baseUrl = "https://demoqa.com";
     }
 
