@@ -8,6 +8,14 @@ public class Planet extends AstronomicalObject {
         this.number = number;
     }
 
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
     public void locationFromSun(){
         System.out.println(name + " " + number + " planet from the sun");
     }
