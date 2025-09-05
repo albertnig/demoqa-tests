@@ -2,7 +2,6 @@ package com.simbirsoft.javaCore;
 
 public class Meteorite extends AstronomicalObject {
 
-
     public Meteorite(double weight, double speed, int age, String name) {
         super(weight, speed, age, name);
     }
