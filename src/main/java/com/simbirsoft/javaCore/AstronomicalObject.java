@@ -1,6 +1,6 @@
 package com.simbirsoft.javaCore;
 
-public class AstronomicalObject {
+public abstract class AstronomicalObject {
     public double weight;
     public double speed;
     public int age;
@@ -50,7 +50,7 @@ public class AstronomicalObject {
         AstronomicalObject.space = space;
     }
 
-    public void sendRocket(AstronomicalObject object) {
+    public static void sendRocket(AstronomicalObject object) {
         System.out.println("The rocket flew to " + object.name);
     }
 
@@ -61,5 +61,4 @@ public class AstronomicalObject {
     public double getWeight() {
         return weight;
     }
-
 }

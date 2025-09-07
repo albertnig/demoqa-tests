@@ -1,14 +1,16 @@
 package com.simbirsoft.javaCore;
 
-public class Planet extends AstronomicalObject {
+public class Planet extends AstronomicalObject implements PresenceOfResources {
 
+    public NameOfPlanet planetName;
     public int number;
     public String structure;
 
     String[] planetsStructure = {"earth group", "gas giants", "ice giants"};
 
-    public Planet(double weight, double speed, int age, String name, int number, int index) {
-        super(weight, speed, age, name);
+    public Planet(double weight, double speed, int age, NameOfPlanet planetName, int number, int index) {
+        super(weight, speed, age, planetName.name());
+        this.planetName = planetName;
         this.number = number;
         this.structure = planetsStructure[index];
     }
@@ -39,5 +41,23 @@ public class Planet extends AstronomicalObject {
             System.out.println(this.name + " is very far from the sun");
         }
         return this;
+    }
+
+    @Override
+    public void lookingForPeople() {
+        if (planetName.equals(NameOfPlanet.EARTH)){
+            System.out.println("There are people on planet " + planetName);
+        } else {
+            System.out.println("There are no people on planet " + planetName);
+        }
+    }
+
+    @Override
+    public void lookingForWater() {
+        if (planetName.equals(NameOfPlanet.EARTH) || planetName.equals(NameOfPlanet.MARS)){
+            System.out.println("There is water on planet " + planetName);
+        } else {
+            System.out.println("There is no water on planet " + planetName);
+        }
     }
 }
