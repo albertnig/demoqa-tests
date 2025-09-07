@@ -8,7 +8,7 @@ public class Star extends AstronomicalObject {
         this.energy = energy;
     }
 
-    public void allocatedEnergy(){
+    public void allocatedEnergy() {
         System.out.println(energy + " watts of energy is allocated");
     }
 }

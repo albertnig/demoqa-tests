@@ -58,7 +58,7 @@ public class AstronomicalObject {
         System.out.println("The big bang");
     }
 
-    public double getWeight(){
+    public double getWeight() {
         return weight;
     }
 
