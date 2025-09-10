@@ -1,4 +1,4 @@
-package com.simbirsoft;
+package com.simbirsoft.tests;
 
 import org.junit.jupiter.api.Test;
 
@@ -15,6 +15,5 @@ public class AlfabankTest {
         $("body").shouldHave(text("Выберите продукт и станьте клиентом"));
         $$(byText("Накопления")).find(visible).click();
         $("body").shouldHave(text("Накопительный Альфа‑Счёт"));
-
     }
 }
