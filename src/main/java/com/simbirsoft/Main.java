@@ -1,6 +1,7 @@
 package com.simbirsoft;
 
 import com.simbirsoft.javaCore.*;
+
 import static com.simbirsoft.javaCore.AstronomicalObject.sendRocket;
 
 public class Main {

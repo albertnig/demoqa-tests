@@ -45,7 +45,7 @@ public class Planet extends AstronomicalObject implements PresenceOfResources {
 
     @Override
     public void lookingForPeople() {
-        if (planetName.equals(NameOfPlanet.EARTH)){
+        if (planetName.equals(NameOfPlanet.EARTH)) {
             System.out.println("There are people on planet " + planetName);
         } else {
             System.out.println("There are no people on planet " + planetName);
@@ -54,7 +54,7 @@ public class Planet extends AstronomicalObject implements PresenceOfResources {
 
     @Override
     public void lookingForWater() {
-        if (planetName.equals(NameOfPlanet.EARTH) || planetName.equals(NameOfPlanet.MARS)){
+        if (planetName.equals(NameOfPlanet.EARTH) || planetName.equals(NameOfPlanet.MARS)) {
             System.out.println("There is water on planet " + planetName);
         } else {
             System.out.println("There is no water on planet " + planetName);
