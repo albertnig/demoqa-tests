@@ -41,7 +41,5 @@ public class Main {
 
         planet1.lookingForPeople();
         planet2.lookingForWater();
-
-
     }
 }
