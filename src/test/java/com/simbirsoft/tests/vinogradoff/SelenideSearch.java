@@ -7,7 +7,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class SelenideSearch {
     @Test
-    void shouldFindSelenideRepositoryPage(){
+    void shouldFindSelenideRepositoryPage() {
         //открыть страницу github.com
         open("https://github.com/");
         // кликнуть на поле поиска чтобы активировать его

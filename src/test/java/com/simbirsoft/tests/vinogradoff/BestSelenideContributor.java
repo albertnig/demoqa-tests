@@ -8,7 +8,7 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class BestSelenideContributor {
     @Test
-    void andreiSolntsevShouldBeTheBestContributor(){
+    void andreiSolntsevShouldBeTheBestContributor() {
         //открыть страничку selenide
         open("https://github.com/selenide/selenide");
         //подвести мышку к первому элементу в области Contributors
