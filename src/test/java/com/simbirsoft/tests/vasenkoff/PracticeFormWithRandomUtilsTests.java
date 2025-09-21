@@ -2,14 +2,19 @@ package com.simbirsoft.tests.vasenkoff;
 
 import com.simbirsoft.tests.vasenkoff.PageObject.TestBase;
 import org.junit.jupiter.api.Test;
+
 import java.time.Duration;
+
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
-import static com.codeborne.selenide.Selenide.*;
-import static com.simbirsoft.tests.vasenkoff.PageObject.TestData.firstName;
-import static com.simbirsoft.tests.vasenkoff.PageObject.TestData.lastName;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
+import static com.simbirsoft.utils.RandomUtils.getRandomString;
 
-public class PracticeFormTests extends TestBase {
+public class PracticeFormWithRandomUtilsTests extends TestBase {
+
+    String firstName = getRandomString(10),
+            lastName = getRandomString(10);
 
     @Test
     void fillFormTest() {

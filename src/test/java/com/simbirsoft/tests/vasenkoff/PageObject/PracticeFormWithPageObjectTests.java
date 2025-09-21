@@ -1,4 +1,4 @@
-package com.simbirsoft.tests.vasenkoff;
+package com.simbirsoft.tests.vasenkoff.PageObject;
 
 import com.simbirsoft.pages.RegistrationPage;
 import org.junit.jupiter.api.Test;
@@ -9,8 +9,8 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static com.simbirsoft.tests.vasenkoff.TestData.firstName;
-import static com.simbirsoft.tests.vasenkoff.TestData.lastName;
+import static com.simbirsoft.tests.vasenkoff.PageObject.TestData.firstName;
+import static com.simbirsoft.tests.vasenkoff.PageObject.TestData.lastName;
 
 public class PracticeFormWithPageObjectTests extends TestBase {
 
