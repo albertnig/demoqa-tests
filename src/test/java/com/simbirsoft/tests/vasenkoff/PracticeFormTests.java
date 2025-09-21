@@ -1,4 +1,4 @@
-package com.simbirsoft.tests;
+package com.simbirsoft.tests.vasenkoff;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
@@ -7,24 +7,18 @@ import java.time.Duration;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
+import static com.simbirsoft.tests.vasenkoff.TestData.firstName;
+import static com.simbirsoft.tests.vasenkoff.TestData.lastName;
 
-public class PracticeFormTests {
-    @BeforeAll
-    static void beforeAll() {
-        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        Configuration.browserSize = screenSize.width + "x" + screenSize.height;
-        Configuration.pageLoadTimeout = 60000;
-        //Configuration.holdBrowserOpen = true;
-        Configuration.baseUrl = "https://demoqa.com";
-    }
+public class PracticeFormTests extends TestBase {
 
     @Test
     void fillFormTest() {
         String permanentAddress = "some street 1";
         open("/automation-practice-form");
         // Заполнение основных полей
-        $("#firstName").setValue("Alex");
-        $("#lastName").setValue("Smith");
+        $("#firstName").setValue(firstName);
+        $("#lastName").setValue(lastName);
         $("#userEmail").setValue("alex@smith.com");
         // Выбор пола
         $("label[for='gender-radio-1']").click();
