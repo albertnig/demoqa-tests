@@ -5,7 +5,6 @@ import com.simbirsoft.tests.vasenkoff.PageObject.TestBase;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
-
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
