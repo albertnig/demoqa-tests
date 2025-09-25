@@ -1,4 +1,4 @@
-package com.simbirsoft.tests.vinogradoff;
+package com.simbirsoft.tests.vinogradoff.topic4.one;
 
 import org.junit.jupiter.api.Test;
 import static com.codeborne.selenide.Condition.*;

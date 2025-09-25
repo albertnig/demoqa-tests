@@ -1,4 +1,4 @@
-package com.simbirsoft.tests.vinogradoff;
+package com.simbirsoft.tests.vinogradoff.topic4.two;
 
 import org.junit.jupiter.api.Test;
 
