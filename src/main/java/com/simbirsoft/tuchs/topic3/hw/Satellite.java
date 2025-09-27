@@ -1,4 +1,4 @@
-package com.simbirsoft.javaCore;
+package com.simbirsoft.tuchs.topic3.hw;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.simbirsoft.docs;
+package com.simbirsoft.tests.vasenkoff.topic2.docs;
 
 import org.junit.jupiter.api.*;
 

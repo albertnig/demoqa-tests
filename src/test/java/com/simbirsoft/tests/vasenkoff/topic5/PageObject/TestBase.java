@@ -1,4 +1,4 @@
-package com.simbirsoft.tests.vasenkoff.PageObject;
+package com.simbirsoft.tests.vasenkoff.topic5.PageObject;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;

@@ -1,4 +1,4 @@
-package com.simbirsoft.javaCore;
+package com.simbirsoft.tuchs.topic3.hw;
 
 public class Planet extends AstronomicalObject implements PresenceOfResources {
 

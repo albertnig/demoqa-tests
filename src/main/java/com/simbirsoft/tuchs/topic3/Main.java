@@ -1,7 +1,8 @@
-package com.simbirsoft;
+package com.simbirsoft.tuchs.topic3;
 
-import com.simbirsoft.javaCore.*;
-import static com.simbirsoft.javaCore.AstronomicalObject.sendRocket;
+import com.simbirsoft.tuchs.topic3.hw.*;
+
+import static com.simbirsoft.tuchs.topic3.hw.AstronomicalObject.sendRocket;
 
 public class Main {
     static Meteorite meteorite = new Meteorite(1.1, 16, 1, "Asteroid Bennu");
