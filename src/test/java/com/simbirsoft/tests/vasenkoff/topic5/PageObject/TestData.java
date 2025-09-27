@@ -1,4 +1,4 @@
-package com.simbirsoft.tests.vasenkoff.PageObject;
+package com.simbirsoft.tests.vasenkoff.topic5.PageObject;
 
 public class TestData {
     public static String

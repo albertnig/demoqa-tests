@@ -1,4 +1,4 @@
-package com.simbirsoft.tests.vasenkoff;
+package com.simbirsoft.tests.vasenkoff.topic2;
 
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;

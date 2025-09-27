@@ -1,4 +1,4 @@
-package com.simbirsoft.javaCore;
+package com.simbirsoft.tuchs.topic3.hw;
 
 public class Star extends AstronomicalObject {
     public double energy = 3.8;

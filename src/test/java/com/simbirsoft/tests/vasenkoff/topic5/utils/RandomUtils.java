@@ -1,4 +1,4 @@
-package com.simbirsoft.utils;
+package com.simbirsoft.tests.vasenkoff.topic5.utils;
 
 import org.apache.commons.lang3.StringUtils;
 import java.util.Random;

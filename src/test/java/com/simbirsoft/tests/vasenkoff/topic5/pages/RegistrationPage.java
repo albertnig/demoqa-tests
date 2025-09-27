@@ -1,7 +1,7 @@
-package com.simbirsoft.pages;
+package com.simbirsoft.tests.vasenkoff.topic5.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.simbirsoft.pages.components.CalendarComponent;
+import com.simbirsoft.tests.vasenkoff.topic5.components.CalendarComponent;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.*;
