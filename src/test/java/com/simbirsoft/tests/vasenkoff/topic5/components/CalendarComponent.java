@@ -1,4 +1,4 @@
-package com.simbirsoft.pages.components;
+package com.simbirsoft.tests.vasenkoff.topic5.components;
 
 import static com.codeborne.selenide.Selenide.$;
 
