@@ -2,7 +2,6 @@ package com.simbirsoft.tests.vasenkoff.topic5;
 
 import static com.simbirsoft.tests.vasenkoff.topic5.utils.RandomUtils.*;
 
-
 public class RandomExamples {
     public static void main(String[] args) {
         System.out.println(getRandomString(32));
