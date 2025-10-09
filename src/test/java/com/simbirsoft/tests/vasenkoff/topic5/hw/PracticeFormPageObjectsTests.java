@@ -3,7 +3,6 @@ package com.simbirsoft.tests.vasenkoff.topic5.hw;
 import org.junit.jupiter.api.Test;
 
 import java.time.Duration;
-
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
