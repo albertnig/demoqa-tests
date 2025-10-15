@@ -1,7 +1,6 @@
 package com.simbirsoft.tuchs.topic3;
 
 import com.simbirsoft.tuchs.topic3.hw.*;
-
 import static com.simbirsoft.tuchs.topic3.hw.AstronomicalObject.sendRocket;
 
 public class Main {
