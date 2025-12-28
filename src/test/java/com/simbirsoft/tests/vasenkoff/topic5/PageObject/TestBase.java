@@ -3,7 +3,8 @@ package com.simbirsoft.tests.vasenkoff.topic5.PageObject;
 import com.codeborne.selenide.Configuration;
 import org.junit.jupiter.api.BeforeAll;
 
-public class TestBase {
+public class
+TestBase {
     @BeforeAll
     static void beforeAll() {
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
