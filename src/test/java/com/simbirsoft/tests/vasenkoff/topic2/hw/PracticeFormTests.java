@@ -1,13 +1,13 @@
 package com.simbirsoft.tests.vasenkoff.topic2.hw;
 
-import com.simbirsoft.tests.vasenkoff.topic5.PageObject.TestBase;
+import com.simbirsoft.tests.vasenkoff.topic5.classwork.PageObject.TestBase;
 import org.junit.jupiter.api.Test;
 import java.time.Duration;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
-import static com.simbirsoft.tests.vasenkoff.topic5.PageObject.TestData.firstName;
-import static com.simbirsoft.tests.vasenkoff.topic5.PageObject.TestData.lastName;
+import static com.simbirsoft.tests.vasenkoff.topic5.classwork.PageObject.TestData.firstName;
+import static com.simbirsoft.tests.vasenkoff.topic5.classwork.PageObject.TestData.lastName;
 
 public class PracticeFormTests extends TestBase {
 

@@ -1,13 +1,13 @@
-package com.simbirsoft.tests.vasenkoff.topic5;
+package com.simbirsoft.tests.vasenkoff.topic5.classwork;
 
-import com.simbirsoft.tests.vasenkoff.topic5.PageObject.TestBase;
+import com.simbirsoft.tests.vasenkoff.topic5.classwork.PageObject.TestBase;
 import org.junit.jupiter.api.Test;
 import java.time.Duration;
 import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static com.simbirsoft.tests.vasenkoff.topic5.utils.RandomUtils.getRandomString;
+import static com.simbirsoft.tests.vasenkoff.topic5.classwork.utils.RandomUtils.getRandomString;
 
 public class PracticeFormWithRandomUtilsTests extends TestBase {
 
@@ -18,6 +18,7 @@ public class PracticeFormWithRandomUtilsTests extends TestBase {
     void fillFormTest() {
         String permanentAddress = "some street 1";
         open("/automation-practice-form");
+        //$(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
         // Заполнение основных полей
         $("#firstName").setValue(firstName);
         $("#lastName").setValue(lastName);

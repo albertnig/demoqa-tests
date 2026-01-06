@@ -1,6 +1,6 @@
-package com.simbirsoft.tests.vasenkoff.topic5;
+package com.simbirsoft.tests.vasenkoff.topic5.classwork;
 
-import static com.simbirsoft.tests.vasenkoff.topic5.utils.RandomUtils.*;
+import static com.simbirsoft.tests.vasenkoff.topic5.classwork.utils.RandomUtils.*;
 
 public class RandomExamples {
     public static void main(String[] args) {
