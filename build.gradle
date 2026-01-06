@@ -6,9 +6,15 @@ repositories {
     mavenCentral()
 }
 
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
 dependencies {
-    testImplementation 'com.codeborne:selenide:7.2.3'  // Обновленная версия
-    testImplementation 'org.seleniumhq.selenium:selenium-java:4.18.1'  // Явное указание Selenium
+    testImplementation 'org.apache.commons:commons-lang3:3.18.0'
+    testImplementation 'com.codeborne:selenide:7.7.3'
+    testImplementation 'com.github.javafaker:javafaker:1.0.2'
+    //testImplementation 'org.seleniumhq.selenium:selenium-java:4.18.1'  // Явное указание Selenium
     testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
     testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
     testRuntimeOnly 'org.slf4j:slf4j-simple:2.0.12'

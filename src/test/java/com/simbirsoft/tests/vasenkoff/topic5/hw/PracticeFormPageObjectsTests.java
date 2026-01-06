@@ -6,8 +6,8 @@ import static com.codeborne.selenide.Condition.*;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.open;
-import static com.simbirsoft.tests.vasenkoff.topic5.PageObject.TestData.firstName;
-import static com.simbirsoft.tests.vasenkoff.topic5.PageObject.TestData.lastName;
+import static com.simbirsoft.tests.vasenkoff.topic5.hw.TestData.firstName;
+import static com.simbirsoft.tests.vasenkoff.topic5.hw.TestData.lastName;
 
 public class PracticeFormPageObjectsTests {
     @Test
