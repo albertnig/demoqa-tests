@@ -2,10 +2,8 @@ package com.simbirsoft.tests.vasenkoff.topic5.classwork.pages;
 
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.conditions.Visible;
-import com.simbirsoft.tests.vasenkoff.topic5.classwork.components.CalendarComponent;
-import com.simbirsoft.tests.vasenkoff.topic5.classwork.components.ResultsModal;
-
-import java.io.File;
+import com.simbirsoft.tests.vasenkoff.topic5.classwork.pages.components.CalendarComponent;
+import com.simbirsoft.tests.vasenkoff.topic5.classwork.pages.components.ResultsModal;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
@@ -86,11 +84,6 @@ public class RegistrationPage {
         return this;
     }
 
-    public RegistrationPage uploadPicture(File file) {
-        uploadPictureInput.uploadFile(file);
-        return this;
-    }
-
     public RegistrationPage setCurrentAddress(String address) {
         currentAddressInput.setValue(address);
         return this;
@@ -106,10 +99,6 @@ public class RegistrationPage {
         cityInput.click();
         stateCityWrapper.$(byText(city)).click();
         return this;
-    }
-
-    public void submit() {
-        submitButton.click();
     }
 
     public RegistrationPage submitAndWaitForModal() {
