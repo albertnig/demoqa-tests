@@ -1,4 +1,4 @@
-package com.simbirsoft.tests.vasenkoff.topic5.classwork.components;
+package com.simbirsoft.tests.vasenkoff.topic5.classwork.pages.components;
 
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.conditions.Visible;
