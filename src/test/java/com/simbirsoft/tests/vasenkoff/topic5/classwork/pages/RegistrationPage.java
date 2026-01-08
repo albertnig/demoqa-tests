@@ -1,10 +1,14 @@
 package com.simbirsoft.tests.vasenkoff.topic5.classwork.pages;
 
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.conditions.Visible;
 import com.simbirsoft.tests.vasenkoff.topic5.classwork.pages.components.CalendarComponent;
 import com.simbirsoft.tests.vasenkoff.topic5.classwork.pages.components.ResultsModal;
 
+import java.time.Duration;
+
+import static com.codeborne.selenide.Condition.appear;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
 import static com.codeborne.selenide.Selenide.*;
