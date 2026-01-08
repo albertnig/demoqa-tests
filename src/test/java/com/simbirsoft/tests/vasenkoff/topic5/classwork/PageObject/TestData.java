@@ -9,7 +9,7 @@ public class TestData {
             firstName = faker.name().firstName(),
             lastName = faker.name().lastName(),
             email = faker.internet().emailAddress(),
-            phoneNumber = "8800200600",
+            phoneNumber = faker.phoneNumber().subscriberNumber(10),
             currentAddress = faker.address().fullAddress(),
             state = "NCR",
             city = "Delhi",
